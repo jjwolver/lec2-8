@@ -82,12 +82,12 @@ for li in gb_list_items:
   print(li.string)
 print('------')
 
-#3. Get width of IMG
+#3. Get width of IMG and print
 img_tag = soup.find_all('img')
 for img in img_tag:
   print("Image Width: " + img['width'])
 
-#4. Get the href of a tag
+#4. Get the href of a tag and print
 a_tag = soup.find_all('a')
 for a in a_tag:
   print("href source: " + a['href'])
