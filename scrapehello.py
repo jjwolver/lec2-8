@@ -72,3 +72,22 @@ img_tag = soup.find('img')
 print('The img source:')
 print(img_tag['src'])
 print('------')
+
+#1. Push to Github
+#2. Elements of Goodbye List
+all_gb_elements = soup.find_all(id='goodbye-list')
+print('List items within the goodbye tag')
+gb_list_items = all_gb_elements[0].find_all('li')
+for li in gb_list_items:
+  print(li.string)
+print('------')
+
+#3. Get width of IMG
+img_tag = soup.find_all('img')
+for img in img_tag:
+  print("Image Width: " + img['width'])
+
+#4. Get the href of a tag
+a_tag = soup.find_all('a')
+for a in a_tag:
+  print("href source: " + a['href'])
